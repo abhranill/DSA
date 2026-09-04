@@ -19,17 +19,16 @@ public:
 
         while (current != NULL && current->next != NULL) {
 
-            // Find GCD of current and next node
+         
             int gcd = findGCD(current->val, current->next->val);
 
-            // Create a new node with GCD value
             ListNode* newNode = new ListNode(gcd);
 
-            // Insert new node between current and next
+     
             newNode->next = current->next;
             current->next = newNode;
 
-            // Move to the next ORIGINAL node
+         
             current = newNode->next;
         }
 
